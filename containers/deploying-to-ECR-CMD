@@ -1,0 +1,43 @@
+$ aws ecr create-repository --repository-name node-app
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:us-east-1:040402432646:repository/node-app",
+        "registryId": "040402432646",
+        "repositoryName": "node-app",
+        "repositoryUri": "040402432646.dkr.ecr.us-east-1.amazonaws.com/node-app",
+        "createdAt": "2023-03-28T23:25:13+00:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
+
+
+
+$ docker push 040402432646.dkr.ecr.us-east-1.amazonaws.com/node-app:latest
+
+The push refers to repository [040402432646.dkr.ecr.us-east-1.amazonaws.com/node-app]
+8c25048c3e3d: Pushed 
+c9ddfb2cda1e: Pushed 
+c67afc2e8de8: Pushed 
+d81d715330b7: Pushed 
+1dc7f3bb09a4: Pushed 
+dcaceb729824: Pushed 
+f1b5933fe4b5: Pushed 
+latest: digest: sha256:8d90f017949862889e726e86e4b4e497c295bf7360bb287bf27b706046ac41c2 size: 1786
+
+
+$ aws ecr list-images --repository-name node-app
+
+{
+    "imageIds": [
+        {
+            "imageDigest": "sha256:8d90f017949862889e726e86e4b4e497c295bf7360bb287bf27b706046ac41c2",
+            "imageTag": "latest"
+        }
+    ]
+}
