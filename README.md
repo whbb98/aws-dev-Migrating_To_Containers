@@ -3,8 +3,8 @@ Migrating a Web Application to Docker Containers
 
 ## initial state of the lab
 
-![start](images/start-arch.png)
+![start state](./images/start-arch.png)
 
 ## final state of the lab
 
-![start](images/end-arch.png)
+![final state](./images/end-arch.png)
