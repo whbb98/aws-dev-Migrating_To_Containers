@@ -48,7 +48,7 @@ CREATE TABLE `suppliers` (
 
 LOCK TABLES `suppliers` WRITE;
 /*!40000 ALTER TABLE `suppliers` DISABLE KEYS */;
-INSERT INTO `suppliers` VALUES (1,'Nikki Wolf','100 Main Street','Anytown','CA','nwolf@example.com','3475551212');
+INSERT INTO `suppliers` VALUES (1,'Nikki Wolf','100 Main Street docker container hhhh','Anytown','CA','nwolf@example.com','3475551212');
 /*!40000 ALTER TABLE `suppliers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
